@@ -1,0 +1,18 @@
+<p>binding-event-component works!</p>
+<button (click)="onClick($event)">Click Me</button>
+Name:
+<input type="text" #myName>
+<button (click)="onSubmit(myName.value)">Submit</button>
+<br><br>
+
+<label for="a">Nhập a: </label>
+<input type="number" id= "a" [(ngModel)]="a">
+<label for="b">Nhập b: </label>
+<input type="number" id="b" [(ngModel)]="b">
+<br><br>
+
+<button (click)="Cong()">Cộng</button>
+<button (click)="Tru()">Trừ</button>
+<button (click)="Nhan()">Nhân</button>
+<button (click)="Chia()">Chia</button>
+<button (click)="xoaTrang()">Xóa Trắng</button>

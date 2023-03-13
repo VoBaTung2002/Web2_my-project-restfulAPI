@@ -1,0 +1,44 @@
+<p>lunar-year works!</p>
+<table [border]="1" [cellPadding]="1" [cellSpacing]="1" [width]="350">
+  <tr>
+    <td colspan="3" style="text-align: center; font-weight: bold; color: blue;">Chuyển đổi Dương lịch thành Âm lịch</td>
+  </tr>
+  <tr>
+    <td colspan="3">
+      Ngày
+      <input type="number" [(ngModel)]="dd" style="width: 30px;"/>
+      Tháng
+      <input type="number" [(ngModel)]="mm" style="width: 30px;"/>
+      Năm
+      <input type="number" [(ngModel)]="yy" style="width: 50px;"/>
+      <button (click)="findLunarYearDetail(dd,mm,yy,7)">Chuyển đổi</button>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" style="text-align: center; font-weight: bold; color: blue;">Âm lịch</td>
+  </tr>
+  <tr>
+    <td colspan="1">Thứ trong tuần:</td>
+    <td colspan="2"><input type="text" [(ngModel)]="weekday" /></td>
+  </tr>
+
+  <tr>
+    <td colspan="1">Ngày tháng năm âm:</td>
+    <td colspan="2"><input type="text" [(ngModel)]="date" /></td>
+  </tr>
+
+  <tr>
+    <td colspan="1">Năm:</td>
+    <td colspan="2"><input type="text" [(ngModel)]="year" /></td>
+  </tr>
+
+  <tr>
+    <td colspan="1">Tháng:</td>
+    <td colspan="2"><input type="text" [(ngModel)]="month" /></td>
+  </tr>
+
+  <tr>
+    <td colspan="1">Ngày:</td>
+    <td colspan="2"><input type="text" [(ngModel)]="day" /></td>
+  </tr>
+</table>

@@ -1,0 +1,39 @@
+<p>books works!</p>
+<p>{{ errMessage }}</p>
+<h1>QUẢN LÝ THÔNG TIN SÁCH</h1>
+<div>
+  <button (click)="createBook()">Create New</button>
+</div>
+<br />
+<table border="1">
+  <thead>
+    <th>Tên Sách</th>
+    <th>Giá Bán</th>
+    <th>Mô Tả</th>
+    <th>Ảnh Bìa</th>
+    <th>Ngày cập nhật</th>
+    <th>Số lượng tồn</th>
+    <th>Mã CD</th>
+    <th>Mã NXB</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{ book.tenSach }}</td>
+      <td>{{ book.giaBan }}</td>
+      <td style="width: 500px; text-align: justify">{{ book.moTa }}</td>
+      <td>
+        <img src="http://localhost:3000/image/{{ book.anhBia }}"height="100px" width="100px"/>
+      </td>
+      <td>{{ book.ngayCapNhat }}</td>
+      <td>{{ book.soLuongTon }}</td>
+      <td>{{ book.maCD }}</td>
+      <td>{{ book.maNXB }}</td>
+      <td>
+        <button (click)="updateBook(book)">Edit</button> |
+        <button (click)="viewDetail(book)">Details</button> |
+        <button (click)="deleteBook(book.sachID)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

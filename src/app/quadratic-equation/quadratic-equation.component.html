@@ -1,0 +1,31 @@
+<p>quadratic-equation works!</p>
+<table [border]="1" [cellPadding]="0" [cellSpacing]="1" [width]="300">
+  <tr>
+    <td colspan="2" [style]="{'background-color':'greenyellow', 'font-weight':'bold', 'text-align':'center'}">Giải phương trình bậc 2 online</td>
+  </tr>
+  <tr>
+    <td [width]="80">Hệ số a:</td>
+    <td [width]="220"><input type="text" name="a" id="a" [(ngModel)]="quadratic.a"></td>
+  </tr>
+  <tr>
+    <td>Hệ số b:</td>
+    <td><input type="text" name="b" id="b" [(ngModel)]="quadratic.b"></td>
+  </tr>
+  <tr>
+    <td>Hệ số c:</td>
+    <td><input type="text" name="c" id="c" [(ngModel)]="quadratic.c"></td>
+  </tr>
+  <tr>
+    <td>Kết quả:</td>
+    <td><input type="text" name="result" id="result" [value]="result"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <button (click)="giaiPhuongTrinh()">Giải phương trình</button>
+      <button (click)="xoaTrang()">Xóa trắng</button>
+    </td>
+  </tr>
+</table>
+
+

@@ -1,0 +1,18 @@
+<p>bai11 works!</p>
+<table [border]="1" [cellPadding]="1" [cellSpacing]="1">
+  <tr>
+    <td>Product ID:</td>
+    <td>{{ products[0].productID }}</td>
+  </tr>
+  <tr>
+    <td>Product Name:</td>
+    <td>{{ products[0].productName }}</td>
+  </tr>
+  <tr>
+    <td>Price:</td>
+    <td>{{ products[0].price }}</td>
+  </tr>
+  <tr>
+    <td colspan="2"><img [src]="products[0].productImage" style="width:80px;"></td>
+  </tr>
+</table>

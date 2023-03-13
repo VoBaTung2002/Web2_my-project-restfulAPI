@@ -1,0 +1,75 @@
+<p>book-update works!</p>
+<p>{{errMessage}}</p>
+<table>
+  <tr>
+    <td>Mã Sách:</td>
+    <td>
+      <input type="text" class="form-control" #name="ngModel" name="BookId"
+      id="BookId" placeholder="Nhập Mã Sách"
+      [(ngModel)]="book.sachID"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Tên Sách:</td>
+    <td>
+      <input type="text" class="form-control" #name="ngModel"
+      name="BookName" id="BookName" placeholder="Nhập tên sách"
+      [(ngModel)]="book.tenSach"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Giá bán:</td>
+    <td>
+      <input type="text" class="form-control" #name="ngModel"
+      name="BookPrice" id="BookPrice" placeholder="Nhập giá bán"
+      [(ngModel)]="book.giaBan"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Mô tả:</td>
+    <td>
+      <input type="text" class="form-control" #name="ngModel"
+      name="moTa" id="moTa" placeholder="Nhập mô tả"
+      [(ngModel)]="book.giaBan"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Số lượng tồn:</td>
+    <td>
+      <input type="text" class="form-control" #name="ngModel"
+      name="soLuongTon" id="soLuongTon" placeholder="Nhập số lượng"
+      [(ngModel)]="book.soLuongTon"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Mã CD:</td>
+    <td>
+      <input type="text" class="form-control" #name="ngModel"
+      name="maCD id="maCD placeholder="Nhập mã CD"
+      [(ngModel)]="book.maCD"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Mã NXB:</td>
+    <td>
+      <input type="text" class="form-control" #name="ngModel"
+      name="maNXB id="maNXB placeholder="Nhập mã NXB"
+      [(ngModel)]="book.maNXB"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Ảnh bìa:</td>
+    <td>
+      <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload name="image" [(ngModel)]="image">
+      <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">Upload</button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button (click)="putBook()">Cập nhật</button>
+    </td>
+    <td>
+      <button (click)="goBack()">Trở lại</button>
+    </td>
+  </tr>
+</table>

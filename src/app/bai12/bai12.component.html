@@ -1,0 +1,17 @@
+<p>bai12 works!</p>
+<table border="1" [cellPadding]="0" [cellSpacing]="0">
+  <tr>
+      <th>Mã sản phẩm</th>
+      <th>Tên sản phẩm</th>
+      <th>Giá sản phẩm</th>
+      <th>Picture</th>
+  </tr>
+  <tbody>
+      <tr  *ngFor="let p of productsImage">
+          <td>{{p.ProductId}}</td>
+          <td>{{p.ProductName}}</td>
+          <td>{{p.Price}}</td>
+          <td><img [src]="p.Image" style="width:80px;"></td>
+      </tr>
+  </tbody>
+</table>

@@ -1,0 +1,29 @@
+<p>group-customer works!</p>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>#</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let ct of database">
+            <td colspan="5">
+
+                <table border="0">
+                    <tr>
+                        <td colspan="5">{{ct.CustomerTypeId}} - {{ct.CustomterTypeName}}</td>
+                    </tr>
+                    <tr *ngFor="let c of ct.Customers">
+                        <td>{{c.Id}}</td>
+                        <td>{{c.Name}}</td>
+                        <td>{{c.Email}}</td>
+                        <td>{{c.Age}}</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
